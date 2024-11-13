@@ -1,3 +1,4 @@
+import 'package:business_card_app/widgets/row_widget/custom_row_contain_circle_avatar_widget.dart';
 import 'package:flutter/material.dart';
 
 class CustomFrontCardWidget extends StatelessWidget {
@@ -11,9 +12,7 @@ class CustomFrontCardWidget extends StatelessWidget {
         color: Color(
           0xff023926,
         ),
-        child: Row(
-          children: [],
-        ),
+        child: CustomRowContainCircleAvatar(),
       ),
     );
   }
