@@ -98,6 +98,7 @@ class BusinessCard extends StatelessWidget {
 }
 */
 import 'package:business_card_app/view/home_view.dart';
+import 'package:business_card_app/view/work_view.dart';
 import 'package:flutter/material.dart';
 
 void main() => runApp(
@@ -112,7 +113,11 @@ class BusinessCardApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       theme: ThemeData.dark(),
-      home: const HomeView(),
+      routes: {
+        HomeView.homeViewId: (context) => const HomeView(),
+        WorkView.workViewId: (context) => const WorkView(),
+      },
+      initialRoute: HomeView.homeViewId,
     );
   }
 }

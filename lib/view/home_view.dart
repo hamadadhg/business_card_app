@@ -114,64 +114,87 @@ class _HomeViewState extends State<HomeView> {
   }
 }
 */
-import 'package:business_card_app/constant.dart';
+import 'package:business_card_app/view/work_view.dart';
 import 'package:business_card_app/widgets/circle_avatar_widget/custom_circle_avatar_widget.dart';
-import 'package:business_card_app/widgets/text_widget/custom_text_field_widget.dart';
+import 'package:business_card_app/widgets/text_widget/custom_text_form_field_widget.dart';
 import 'package:business_card_app/widgets/text_widget/custom_text_widget.dart';
 import 'package:flutter/material.dart';
 
-class HomeView extends StatelessWidget {
+class HomeView extends StatefulWidget {
   const HomeView({super.key});
+  static String homeViewId = 'HomeView';
+  @override
+  State<HomeView> createState() => _HomeViewState();
+}
 
+class _HomeViewState extends State<HomeView> {
+  GlobalKey<FormState> formKey = GlobalKey<FormState>();
+  AutovalidateMode autovalidateMode = AutovalidateMode.disabled;
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      resizeToAvoidBottomInset: false,
       body: Padding(
         padding: const EdgeInsets.symmetric(
           horizontal: 10,
         ),
-        child: Column(
-          children: [
-            const SizedBox(
-              height: 50,
-            ),
-            const CustomTextWidget(
-              text: '1/6',
-              fontSize: 30,
-              fontWeight: FontWeight.bold,
-            ),
-            const SizedBox(
-              height: 225,
-            ),
-            const Align(
-              alignment: Alignment.centerLeft,
-              child: CustomTextWidget(
-                text: 'Name',
-                fontSize: 27,
+        child: Form(
+          key: formKey,
+          child: Column(
+            children: [
+              const SizedBox(
+                height: 50,
+              ),
+              const CustomTextWidget(
+                text: '1/6',
+                fontSize: 30,
                 fontWeight: FontWeight.bold,
               ),
-            ),
-            const SizedBox(
-              height: 7,
-            ),
-            const Align(
-              alignment: Alignment.centerLeft,
-              child: CustomTextWidget(
-                text: 'What\'s Your Name?',
-                fontSize: 17,
+              const SizedBox(
+                height: 225,
               ),
-            ),
-            const SizedBox(
-              height: 20,
-            ),
-            const CustomTextFieldWidget(),
-            const SizedBox(
-              height: 265,
-            ),
-            CustomCircleAvatarWidget(
-              onTap: () {},
-            ),
-          ],
+              const Align(
+                alignment: Alignment.centerLeft,
+                child: CustomTextWidget(
+                  text: 'Name',
+                  fontSize: 27,
+                  fontWeight: FontWeight.bold,
+                ),
+              ),
+              const SizedBox(
+                height: 7,
+              ),
+              const Align(
+                alignment: Alignment.centerLeft,
+                child: CustomTextWidget(
+                  text: 'What\'s Your Name?',
+                  fontSize: 17,
+                ),
+              ),
+              const SizedBox(
+                height: 20,
+              ),
+              const CustomTextFieldWidget(),
+              const SizedBox(
+                height: 265,
+              ),
+              CustomCircleAvatarWidget(
+                onTap: () {
+                  if (formKey.currentState!.validate()) {
+                    Navigator.of(context).pushNamed(
+                      WorkView.workViewId,
+                    );
+                  } else {
+                    setState(
+                      () {
+                        autovalidateMode = AutovalidateMode.always;
+                      },
+                    );
+                  }
+                },
+              ),
+            ],
+          ),
         ),
       ),
     );
