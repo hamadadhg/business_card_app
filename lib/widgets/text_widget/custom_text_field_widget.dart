@@ -1,3 +1,4 @@
+import 'package:business_card_app/constant.dart';
 import 'package:business_card_app/helper/outline_input_border_helper.dart';
 import 'package:flutter/material.dart';
 
@@ -7,6 +8,7 @@ class CustomTextFieldWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return TextField(
+      cursorColor: kWhiteColor,
       decoration: InputDecoration(
         border: const OutlineInputBorder(),
         enabledBorder: outlineInputBorderHelper(),

@@ -124,28 +124,47 @@ class HomeView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return const Scaffold(
-      body: Column(
-        children: [
-          SizedBox(
-            height: 300,
-          ),
-          CustomTextWidget(
-            text: 'Name',
-            fontSize: 25,
-            fontWeight: FontWeight.bold,
-          ),
-          SizedBox(
-            height: 6,
-          ),
-          CustomTextWidget(
-            text: 'What\'s Your Name?',
-            fontSize: 17,
-          ),
-          SizedBox(
-            height: 15,
-          ),
-          CustomTextFieldWidget(),
-        ],
+      body: Padding(
+        padding: EdgeInsets.symmetric(
+          horizontal: 10,
+        ),
+        child: Column(
+          children: [
+            SizedBox(
+              height: 50,
+            ),
+            CustomTextWidget(
+              text: '1/6',
+              fontSize: 30,
+              fontWeight: FontWeight.bold,
+            ),
+            SizedBox(
+              height: 225,
+            ),
+            Align(
+              alignment: Alignment.centerLeft,
+              child: CustomTextWidget(
+                text: 'Name',
+                fontSize: 27,
+                fontWeight: FontWeight.bold,
+              ),
+            ),
+            SizedBox(
+              height: 7,
+            ),
+            Align(
+              alignment: Alignment.centerLeft,
+              child: CustomTextWidget(
+                text: 'What\'s Your Name?',
+                fontSize: 17,
+              ),
+            ),
+            SizedBox(
+              height: 20,
+            ),
+            CustomTextFieldWidget(),
+          ],
+        ),
       ),
     );
   }
