@@ -114,6 +114,8 @@ class _HomeViewState extends State<HomeView> {
   }
 }
 */
+import 'package:business_card_app/constant.dart';
+import 'package:business_card_app/widgets/circle_avatar_widget/custom_circle_avatar_widget.dart';
 import 'package:business_card_app/widgets/text_widget/custom_text_field_widget.dart';
 import 'package:business_card_app/widgets/text_widget/custom_text_widget.dart';
 import 'package:flutter/material.dart';
@@ -123,25 +125,25 @@ class HomeView extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const Scaffold(
+    return Scaffold(
       body: Padding(
-        padding: EdgeInsets.symmetric(
+        padding: const EdgeInsets.symmetric(
           horizontal: 10,
         ),
         child: Column(
           children: [
-            SizedBox(
+            const SizedBox(
               height: 50,
             ),
-            CustomTextWidget(
+            const CustomTextWidget(
               text: '1/6',
               fontSize: 30,
               fontWeight: FontWeight.bold,
             ),
-            SizedBox(
+            const SizedBox(
               height: 225,
             ),
-            Align(
+            const Align(
               alignment: Alignment.centerLeft,
               child: CustomTextWidget(
                 text: 'Name',
@@ -149,20 +151,26 @@ class HomeView extends StatelessWidget {
                 fontWeight: FontWeight.bold,
               ),
             ),
-            SizedBox(
+            const SizedBox(
               height: 7,
             ),
-            Align(
+            const Align(
               alignment: Alignment.centerLeft,
               child: CustomTextWidget(
                 text: 'What\'s Your Name?',
                 fontSize: 17,
               ),
             ),
-            SizedBox(
+            const SizedBox(
               height: 20,
             ),
-            CustomTextFieldWidget(),
+            const CustomTextFieldWidget(),
+            const SizedBox(
+              height: 265,
+            ),
+            CustomCircleAvatarWidget(
+              onTap: () {},
+            ),
           ],
         ),
       ),
