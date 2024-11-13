@@ -114,6 +114,7 @@ class _HomeViewState extends State<HomeView> {
   }
 }
 */
+import 'package:business_card_app/widgets/text_widget/custom_text_field_widget.dart';
 import 'package:business_card_app/widgets/text_widget/custom_text_widget.dart';
 import 'package:flutter/material.dart';
 
@@ -124,17 +125,26 @@ class HomeView extends StatelessWidget {
   Widget build(BuildContext context) {
     return const Scaffold(
       body: Column(
-        mainAxisAlignment: MainAxisAlignment.center,
         children: [
+          SizedBox(
+            height: 300,
+          ),
           CustomTextWidget(
             text: 'Name',
             fontSize: 25,
             fontWeight: FontWeight.bold,
           ),
+          SizedBox(
+            height: 6,
+          ),
           CustomTextWidget(
             text: 'What\'s Your Name?',
             fontSize: 17,
           ),
+          SizedBox(
+            height: 15,
+          ),
+          CustomTextFieldWidget(),
         ],
       ),
     );
