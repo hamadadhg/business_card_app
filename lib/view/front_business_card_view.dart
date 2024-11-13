@@ -1,9 +1,9 @@
 import 'package:business_card_app/widgets/text_widget/custom_text_widget.dart';
 import 'package:flutter/material.dart';
 
-class BackBusinessCardView extends StatelessWidget {
-  const BackBusinessCardView({super.key});
-  static String backBusinessCardViewId = 'BackBusinessCardView';
+class FrontBusinessCardView extends StatelessWidget {
+  const FrontBusinessCardView({super.key});
+  static String frontBusinessCardViewId = 'FrontBusinessCardView';
   @override
   Widget build(BuildContext context) {
     return const Scaffold(

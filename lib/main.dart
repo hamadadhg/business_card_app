@@ -97,7 +97,7 @@ class BusinessCard extends StatelessWidget {
   }
 }
 */
-import 'package:business_card_app/view/back_business_card_view.dart';
+import 'package:business_card_app/view/front_business_card_view.dart';
 import 'package:business_card_app/view/email_view.dart';
 import 'package:business_card_app/view/home_view.dart';
 import 'package:business_card_app/view/image_view.dart';
@@ -125,8 +125,8 @@ class BusinessCardApp extends StatelessWidget {
         EmailView.emailViewId: (context) => const EmailView(),
         SiteView.siteViewId: (context) => const SiteView(),
         ImageView.imageViewId: (context) => const ImageView(),
-        BackBusinessCardView.backBusinessCardViewId: (context) =>
-            const BackBusinessCardView(),
+        FrontBusinessCardView.frontBusinessCardViewId: (context) =>
+            const FrontBusinessCardView(),
       },
       initialRoute: HomeView.homeViewId,
     );

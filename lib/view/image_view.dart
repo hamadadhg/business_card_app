@@ -1,4 +1,4 @@
-import 'package:business_card_app/view/back_business_card_view.dart';
+import 'package:business_card_app/view/front_business_card_view.dart';
 import 'package:business_card_app/widgets/circle_avatar_widget/custom_circle_avatar_widget.dart';
 import 'package:business_card_app/widgets/text_widget/custom_text_widget.dart';
 import 'package:flutter/material.dart';
@@ -52,7 +52,7 @@ class ImageView extends StatelessWidget {
                 onTap: () {
                   Navigator.pushNamed(
                     context,
-                    BackBusinessCardView.backBusinessCardViewId,
+                    FrontBusinessCardView.frontBusinessCardViewId,
                   );
                 },
                 text: 'Go',
