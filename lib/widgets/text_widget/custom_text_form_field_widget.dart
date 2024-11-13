@@ -9,7 +9,10 @@ class CustomTextFieldWidget extends StatelessWidget {
   Widget build(BuildContext context) {
     return TextFormField(
       validator: (value) {
-        return 'This Field Is Required';
+        if (value == null || value.isEmpty) {
+          return 'This Field Is Required';
+        }
+        return null;
       },
       cursorColor: kWhiteColor,
       decoration: InputDecoration(
