@@ -100,6 +100,7 @@ class BusinessCard extends StatelessWidget {
 import 'package:business_card_app/view/email_view.dart';
 import 'package:business_card_app/view/home_view.dart';
 import 'package:business_card_app/view/number_view.dart';
+import 'package:business_card_app/view/site_view.dart';
 import 'package:business_card_app/view/work_view.dart';
 import 'package:flutter/material.dart';
 
@@ -120,6 +121,7 @@ class BusinessCardApp extends StatelessWidget {
         WorkView.workViewId: (context) => const WorkView(),
         NumberView.numberViewId: (context) => const NumberView(),
         EmailView.emailViewId: (context) => const EmailView(),
+        SiteView.siteViewId: (context) => const SiteView(),
       },
       initialRoute: HomeView.homeViewId,
     );

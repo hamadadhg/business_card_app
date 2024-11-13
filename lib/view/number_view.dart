@@ -30,7 +30,7 @@ class _NumberViewState extends State<NumberView> {
                 viewNumber: '3/6',
                 firstTextInTextWidget: 'Number',
                 secondTextInTextWidget:
-                    'What\'s Your Number And Your State Symbol',
+                    'What\'s Your Number And Your State Symbol?',
               ),
               Row(
                 mainAxisAlignment: MainAxisAlignment.center,
