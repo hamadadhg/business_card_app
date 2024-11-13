@@ -33,22 +33,39 @@ class _WorkViewState extends State<WorkView> {
                 firstTextInTextWidget: 'Work',
                 secondTextInTextWidget: 'What Did You Work?',
               ),
-              CustomCircleAvatarWidget(
-                onTap: () {
-                  if (formKey.currentState!.validate()) {
-                    Navigator.of(context).pushNamed(
-                      NumberView.numberViewId,
-                    );
-                  } else {
-                    setState(
-                      () {
-                        autovalidateMode = AutovalidateMode.always;
-                      },
-                    );
-                  }
-                },
-                text: 'Go',
-                backgroundColor: Colors.green,
+              Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  CustomCircleAvatarWidget(
+                    text: 'Back',
+                    backgroundColor: Colors.red,
+                    onTap: () {
+                      Navigator.pop(
+                        context,
+                      );
+                    },
+                  ),
+                  const SizedBox(
+                    width: 110,
+                  ),
+                  CustomCircleAvatarWidget(
+                    onTap: () {
+                      if (formKey.currentState!.validate()) {
+                        Navigator.of(context).pushNamed(
+                          NumberView.numberViewId,
+                        );
+                      } else {
+                        setState(
+                          () {
+                            autovalidateMode = AutovalidateMode.always;
+                          },
+                        );
+                      }
+                    },
+                    text: 'Go',
+                    backgroundColor: Colors.green,
+                  ),
+                ],
               ),
             ],
           ),
