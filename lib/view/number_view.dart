@@ -5,6 +5,6 @@ class NumberView extends StatelessWidget {
   static String numberViewId = 'NumberView';
   @override
   Widget build(BuildContext context) {
-    return const Placeholder();
+    return const Scaffold();
   }
 }

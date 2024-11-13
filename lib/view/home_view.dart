@@ -116,6 +116,7 @@ class _HomeViewState extends State<HomeView> {
 */
 import 'package:business_card_app/view/work_view.dart';
 import 'package:business_card_app/widgets/circle_avatar_widget/custom_circle_avatar_widget.dart';
+import 'package:business_card_app/widgets/general_widget/custom_some_contain_the_secreen_widget.dart';
 import 'package:business_card_app/widgets/text_widget/custom_text_form_field_widget.dart';
 import 'package:business_card_app/widgets/text_widget/custom_text_widget.dart';
 import 'package:flutter/material.dart';
@@ -142,41 +143,10 @@ class _HomeViewState extends State<HomeView> {
           key: formKey,
           child: Column(
             children: [
-              const SizedBox(
-                height: 60,
-              ),
-              const CustomTextWidget(
-                text: '1/6',
-                fontSize: 30,
-                fontWeight: FontWeight.bold,
-              ),
-              const SizedBox(
-                height: 225,
-              ),
-              const Align(
-                alignment: Alignment.centerLeft,
-                child: CustomTextWidget(
-                  text: 'Name',
-                  fontSize: 27,
-                  fontWeight: FontWeight.bold,
-                ),
-              ),
-              const SizedBox(
-                height: 7,
-              ),
-              const Align(
-                alignment: Alignment.centerLeft,
-                child: CustomTextWidget(
-                  text: 'What\'s Your Name?',
-                  fontSize: 17,
-                ),
-              ),
-              const SizedBox(
-                height: 20,
-              ),
-              const CustomTextFieldWidget(),
-              const SizedBox(
-                height: 250,
+              const CustomSomeContainTheSecreenWidget(
+                viewNumber: '1/6',
+                firstTextInTextWidget: 'Name',
+                secondTextInTextWidget: 'What\'s Your Name?',
               ),
               CustomCircleAvatarWidget(
                 onTap: () {
