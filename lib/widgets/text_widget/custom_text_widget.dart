@@ -1,3 +1,4 @@
+import 'package:business_card_app/constant.dart';
 import 'package:flutter/material.dart';
 
 class CustomTextWidget extends StatelessWidget {
@@ -6,10 +7,12 @@ class CustomTextWidget extends StatelessWidget {
     required this.text,
     required this.fontSize,
     this.fontWeight = FontWeight.normal,
+    this.color = kWhiteColor,
   });
   final String text;
   final double fontSize;
   final FontWeight fontWeight;
+  final Color color;
   @override
   Widget build(BuildContext context) {
     return Text(
@@ -17,6 +20,7 @@ class CustomTextWidget extends StatelessWidget {
       style: TextStyle(
         fontWeight: fontWeight,
         fontSize: fontSize,
+        color: color,
       ),
     );
   }
