@@ -4,18 +4,22 @@ import 'package:flutter/material.dart';
 class CustomCircleAvatarWidget extends StatelessWidget {
   const CustomCircleAvatarWidget({
     super.key,
-    required this.onTap,
+    this.onTap,
+    required this.text,
+    required this.backgroundColor,
   });
   final void Function()? onTap;
+  final String text;
+  final Color backgroundColor;
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
       onTap: onTap,
-      child: const CircleAvatar(
+      child: CircleAvatar(
         radius: 32,
-        backgroundColor: Colors.green,
+        backgroundColor: backgroundColor,
         child: CustomTextWidget(
-          text: 'Go',
+          text: text,
           fontSize: 25,
           fontWeight: FontWeight.bold,
         ),

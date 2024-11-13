@@ -143,7 +143,7 @@ class _HomeViewState extends State<HomeView> {
           child: Column(
             children: [
               const SizedBox(
-                height: 50,
+                height: 60,
               ),
               const CustomTextWidget(
                 text: '1/6',
@@ -176,7 +176,7 @@ class _HomeViewState extends State<HomeView> {
               ),
               const CustomTextFieldWidget(),
               const SizedBox(
-                height: 265,
+                height: 250,
               ),
               CustomCircleAvatarWidget(
                 onTap: () {
@@ -192,6 +192,8 @@ class _HomeViewState extends State<HomeView> {
                     );
                   }
                 },
+                text: 'Go',
+                backgroundColor: Colors.green,
               ),
             ],
           ),
