@@ -117,8 +117,6 @@ class _HomeViewState extends State<HomeView> {
 import 'package:business_card_app/view/work_view.dart';
 import 'package:business_card_app/widgets/circle_avatar_widget/custom_circle_avatar_widget.dart';
 import 'package:business_card_app/widgets/general_widget/custom_some_contain_the_secreen_widget.dart';
-import 'package:business_card_app/widgets/text_widget/custom_text_form_field_widget.dart';
-import 'package:business_card_app/widgets/text_widget/custom_text_widget.dart';
 import 'package:flutter/material.dart';
 
 class HomeView extends StatefulWidget {
