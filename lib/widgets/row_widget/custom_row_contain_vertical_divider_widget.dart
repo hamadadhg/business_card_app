@@ -7,22 +7,19 @@ class CustomRowContainVerticalDividerWidget extends StatelessWidget {
   Widget build(BuildContext context) {
     return const Row(
       children: [
-        SizedBox(
-          width: 15,
-        ),
         VerticalDivider(
-          thickness: 5,
-          width: 17,
+          thickness: 4,
+          width: 15,
           color: Color(
             0xffE2BB59,
           ),
         ),
         SizedBox(
-          width: 7,
+          width: 5,
         ),
         VerticalDivider(
-          thickness: 5,
-          width: 17,
+          thickness: 4,
+          width: 15,
           color: Color(
             0xffE2BB59,
           ),

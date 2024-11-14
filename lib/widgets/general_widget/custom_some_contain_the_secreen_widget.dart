@@ -48,7 +48,7 @@ class CustomSomeContainTheSecreenWidget extends StatelessWidget {
         const SizedBox(
           height: 20,
         ),
-        const CustomTextFieldWidget(),
+        const CustomTextFormFieldWidget(),
         const SizedBox(
           height: 250,
         ),

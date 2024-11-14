@@ -7,7 +7,7 @@ class CustomFrontCardWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return const SizedBox(
-      height: 330,
+      height: 240,
       child: Card(
         color: Color(
           0xff023926,

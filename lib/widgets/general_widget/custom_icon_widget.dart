@@ -9,6 +9,8 @@ class CustomIconWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
+      height: 26,
+      width: 30,
       color: const Color(
         0xffDFB954,
       ),
