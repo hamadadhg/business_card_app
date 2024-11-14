@@ -153,6 +153,14 @@ class _HomeViewState extends State<HomeView> {
                     index: 0,
                   );
                 },
+                validator: (value) {
+                  if (value == null || value.isEmpty) {
+                    return 'This Field Is Required';
+                  } else if (value.length > 15) {
+                    return 'Just You Can Write 15 Charactar';
+                  }
+                  return null;
+                },
               ),
               CustomCircleAvatarWidget(
                 onTap: () {
