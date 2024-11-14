@@ -9,11 +9,13 @@ class CustomSomeContainTheSecreenWidget extends StatelessWidget {
     required this.firstTextInTextWidget,
     required this.secondTextInTextWidget,
     this.textInputType = TextInputType.text,
+    required this.onChanged,
   });
   final String viewNumber;
   final String firstTextInTextWidget;
   final String secondTextInTextWidget;
   final TextInputType textInputType;
+  final void Function(String)? onChanged;
   @override
   Widget build(BuildContext context) {
     return Column(
@@ -52,6 +54,7 @@ class CustomSomeContainTheSecreenWidget extends StatelessWidget {
         ),
         CustomTextFormFieldWidget(
           textInputType: textInputType,
+          onChanged: onChanged,
         ),
         const SizedBox(
           height: 250,

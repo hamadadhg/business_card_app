@@ -6,11 +6,14 @@ class CustomTextFormFieldWidget extends StatelessWidget {
   const CustomTextFormFieldWidget({
     super.key,
     required this.textInputType,
+    required this.onChanged,
   });
   final TextInputType textInputType;
+  final void Function(String)? onChanged;
   @override
   Widget build(BuildContext context) {
     return TextFormField(
+      onChanged: onChanged,
       keyboardType: textInputType,
       validator: (value) {
         if (value == null || value.isEmpty) {

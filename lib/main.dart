@@ -97,6 +97,7 @@ class BusinessCard extends StatelessWidget {
   }
 }
 */
+import 'package:business_card_app/cubits/take_value_cubit/take_value_cubit.dart';
 import 'package:business_card_app/view/front_business_card_view.dart';
 import 'package:business_card_app/view/email_view.dart';
 import 'package:business_card_app/view/home_view.dart';
@@ -105,6 +106,7 @@ import 'package:business_card_app/view/number_view.dart';
 import 'package:business_card_app/view/site_view.dart';
 import 'package:business_card_app/view/work_view.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 
 void main() => runApp(
       const BusinessCardApp(),
@@ -115,20 +117,23 @@ class BusinessCardApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      debugShowCheckedModeBanner: false,
-      theme: ThemeData.dark(),
-      routes: {
-        HomeView.homeViewId: (context) => const HomeView(),
-        WorkView.workViewId: (context) => const WorkView(),
-        NumberView.numberViewId: (context) => const NumberView(),
-        EmailView.emailViewId: (context) => const EmailView(),
-        SiteView.siteViewId: (context) => const SiteView(),
-        ImageView.imageViewId: (context) => const ImageView(),
-        FrontBusinessCardView.frontBusinessCardViewId: (context) =>
-            const FrontBusinessCardView(),
-      },
-      initialRoute: HomeView.homeViewId,
+    return BlocProvider(
+      create: (context) => TakeValueCubit(),
+      child: MaterialApp(
+        debugShowCheckedModeBanner: false,
+        theme: ThemeData.dark(),
+        routes: {
+          HomeView.homeViewId: (context) => const HomeView(),
+          WorkView.workViewId: (context) => const WorkView(),
+          NumberView.numberViewId: (context) => const NumberView(),
+          EmailView.emailViewId: (context) => const EmailView(),
+          SiteView.siteViewId: (context) => const SiteView(),
+          ImageView.imageViewId: (context) => const ImageView(),
+          FrontBusinessCardView.frontBusinessCardViewId: (context) =>
+              const FrontBusinessCardView(),
+        },
+        initialRoute: HomeView.homeViewId,
+      ),
     );
   }
 }

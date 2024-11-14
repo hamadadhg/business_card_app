@@ -4,59 +4,62 @@ import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
 class CustomColumnContainTexts extends StatelessWidget {
-  const CustomColumnContainTexts({super.key});
-
+  const CustomColumnContainTexts({
+    super.key,
+    required this.lastListCollectionOfValue,
+  });
+  final List<String> lastListCollectionOfValue;
   @override
   Widget build(BuildContext context) {
-    return const Column(
+    return Column(
       children: [
-        SizedBox(
+        const SizedBox(
           height: 20,
         ),
         CustomTextWidget(
-          text: 'Hamada Dere',
+          text: lastListCollectionOfValue[0],
           fontSize: 25,
           fontWeight: FontWeight.bold,
-          color: Color(
+          color: const Color(
             0xffE5B952,
           ),
         ),
         CustomTextWidget(
-          text: 'Flutter Developer',
+          text: lastListCollectionOfValue[1],
           fontSize: 16,
-          color: Color(
+          color: const Color(
             0xffE5B952,
           ),
         ),
-        SizedBox(
+        const SizedBox(
           height: 30,
         ),
         CustomRowContainIconAndTextWidget(
           iconDataInRow: FontAwesomeIcons.phoneVolume,
-          textInRow: '+963 949371163',
+          textInRow: lastListCollectionOfValue[2],
         ),
-        SizedBox(
+        const SizedBox(
           height: 15,
         ),
         Padding(
-          padding: EdgeInsets.only(
+          padding: const EdgeInsets.only(
             left: 16,
           ),
           child: CustomRowContainIconAndTextWidget(
             iconDataInRow: Icons.email,
-            textInRow: 'hamada@gmail.com',
+            textInRow: lastListCollectionOfValue[3],
           ),
         ),
-        SizedBox(
+        const SizedBox(
           height: 15,
         ),
         Padding(
-          padding: EdgeInsets.only(
+          padding: const EdgeInsets.only(
             right: 30,
           ),
           child: CustomRowContainIconAndTextWidget(
             iconDataInRow: FontAwesomeIcons.locationDot,
-            textInRow: 'Syria,Aleppo',
+            textInRow: lastListCollectionOfValue[4],
           ),
         ),
       ],

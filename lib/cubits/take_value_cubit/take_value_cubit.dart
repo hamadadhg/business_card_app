@@ -7,8 +7,9 @@ class TakeValueCubit extends Cubit<TakeValueState> {
           InitialState(),
         );
   List<String> listToTakeValue = [];
-  void takeValueMethod({required String takeValue}) {
-    listToTakeValue.add(
+  void takeValueMethod({required String takeValue, required int index}) {
+    listToTakeValue.insert(
+      index,
       takeValue,
     );
     emit(

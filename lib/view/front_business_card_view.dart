@@ -1,10 +1,26 @@
+import 'package:business_card_app/cubits/take_value_cubit/take_value_cubit.dart';
 import 'package:business_card_app/widgets/general_widget/custom_front_card_widget.dart';
 import 'package:business_card_app/widgets/text_widget/custom_text_widget.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 
-class FrontBusinessCardView extends StatelessWidget {
+class FrontBusinessCardView extends StatefulWidget {
   const FrontBusinessCardView({super.key});
   static String frontBusinessCardViewId = 'FrontBusinessCardView';
+
+  @override
+  State<FrontBusinessCardView> createState() => _FrontBusinessCardViewState();
+}
+
+class _FrontBusinessCardViewState extends State<FrontBusinessCardView> {
+  late List<String> listToRecieveValue;
+  @override
+  void initState() {
+    listToRecieveValue =
+        BlocProvider.of<TakeValueCubit>(context).listToTakeValue;
+    super.initState();
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -27,7 +43,9 @@ class FrontBusinessCardView extends StatelessWidget {
             const SizedBox(
               height: 10,
             ),
-            const CustomFrontCardWidget(),
+            CustomFrontCardWidget(
+              firstListCollectionOfValue: listToRecieveValue,
+            ),
             const SizedBox(
               height: 40,
             ),
