@@ -1,3 +1,4 @@
+import 'package:business_card_app/widgets/general_widget/custom_icon_widget.dart';
 import 'package:business_card_app/widgets/text_widget/custom_text_widget.dart';
 import 'package:flutter/material.dart';
 
@@ -11,6 +12,7 @@ class CustomColumnContainTexts extends StatelessWidget {
         CustomTextWidget(
           text: 'Hamada Dere',
           fontSize: 27,
+          fontWeight: FontWeight.bold,
           color: Color(
             0xffE5B952,
           ),
@@ -21,6 +23,20 @@ class CustomColumnContainTexts extends StatelessWidget {
           color: Color(
             0xffE5B952,
           ),
+        ),
+        Row(
+          children: [
+            CustomIconWidget(
+              iconData: Icons.phone,
+            ),
+            CustomTextWidget(
+              text: '+963949371163',
+              fontSize: 16,
+              color: Color(
+                0xffDFB954,
+              ),
+            ),
+          ],
         ),
       ],
     );
