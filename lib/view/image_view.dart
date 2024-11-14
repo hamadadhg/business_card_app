@@ -1,11 +1,37 @@
+import 'dart:io';
+
 import 'package:business_card_app/view/front_business_card_view.dart';
 import 'package:business_card_app/widgets/circle_avatar_widget/custom_circle_avatar_widget.dart';
 import 'package:business_card_app/widgets/text_widget/custom_text_widget.dart';
 import 'package:flutter/material.dart';
+import 'package:image_picker/image_picker.dart';
 
-class ImageView extends StatelessWidget {
+class ImageView extends StatefulWidget {
   const ImageView({super.key});
   static String imageViewId = 'ImageView';
+
+  @override
+  State<ImageView> createState() => _ImageViewState();
+}
+
+class _ImageViewState extends State<ImageView> {
+  File? selectedImage;
+  Future<void> selectImageMethod() async {
+    ImagePicker imagePicker = ImagePicker();
+    XFile? pickedImageFile = await imagePicker.pickImage(
+      source: ImageSource.gallery,
+    );
+    if (pickedImageFile != null) {
+      setState(
+        () {
+          selectedImage = File(
+            pickedImageFile.path,
+          );
+        },
+      );
+    }
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -20,10 +46,23 @@ class ImageView extends StatelessWidget {
             fontWeight: FontWeight.bold,
           ),
           const SizedBox(
-            height: 255,
+            height: 50,
           ),
+          if (selectedImage != null)
+            Column(
+              children: [
+                Image.file(
+                  selectedImage!,
+                  height: 200,
+                  width: 200,
+                ),
+                const SizedBox(
+                  height: 50,
+                ),
+              ],
+            ),
           TextButton(
-            onPressed: () {},
+            onPressed: selectImageMethod,
             child: const CustomTextWidget(
               text: 'Select Image 📷',
               fontSize: 30,
