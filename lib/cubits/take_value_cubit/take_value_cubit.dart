@@ -6,4 +6,13 @@ class TakeValueCubit extends Cubit<TakeValueState> {
       : super(
           InitialState(),
         );
+  List<String> listToTakeValue = [];
+  void takeValueMethod({required String takeValue}) {
+    listToTakeValue.add(
+      takeValue,
+    );
+    emit(
+      SuccessState(),
+    );
+  }
 }
