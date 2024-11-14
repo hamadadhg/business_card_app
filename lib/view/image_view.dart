@@ -28,6 +28,9 @@ class ImageView extends StatelessWidget {
               text: 'Select Image 📷',
               fontSize: 30,
               fontWeight: FontWeight.bold,
+              color: Color(
+                0xffD0BCFF,
+              ),
             ),
           ),
           const SizedBox(

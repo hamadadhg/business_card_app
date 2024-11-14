@@ -30,6 +30,7 @@ class _EmailViewState extends State<EmailView> {
                 viewNumber: '4/6',
                 firstTextInTextWidget: 'Email',
                 secondTextInTextWidget: 'What\'s Your Email?',
+                textInputType: TextInputType.emailAddress,
               ),
               Row(
                 mainAxisAlignment: MainAxisAlignment.center,

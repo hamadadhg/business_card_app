@@ -31,6 +31,7 @@ class _NumberViewState extends State<NumberView> {
                 firstTextInTextWidget: 'Number',
                 secondTextInTextWidget:
                     'What\'s Your Number And Your State Symbol?',
+                textInputType: TextInputType.phone,
               ),
               Row(
                 mainAxisAlignment: MainAxisAlignment.center,
