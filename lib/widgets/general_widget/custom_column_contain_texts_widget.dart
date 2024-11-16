@@ -1,3 +1,5 @@
+import 'dart:developer';
+
 import 'package:business_card_app/widgets/row_widget/custom_row_contain_icon_and_text_widget.dart';
 import 'package:business_card_app/widgets/text_widget/custom_text_widget.dart';
 import 'package:flutter/material.dart';
@@ -11,6 +13,9 @@ class CustomColumnContainTexts extends StatelessWidget {
   final List<String> lastListCollectionOfValue;
   @override
   Widget build(BuildContext context) {
+    log(
+      'The Email Is ${lastListCollectionOfValue[3]}',
+    );
     return Column(
       children: [
         const SizedBox(

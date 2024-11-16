@@ -44,7 +44,7 @@ class _EmailViewState extends State<EmailView> {
                     return 'This Field Is Required';
                   } else if (value.length > 20) {
                     return 'Just You Can Write 20 Charactar';
-                  } else if (value.contains('@gmail.com')) {
+                  } else if (!value.contains('@gmail.com')) {
                     return 'You Mustn\'t Forget @gmail.com';
                   }
                   return null;

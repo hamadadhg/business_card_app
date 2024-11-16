@@ -1,9 +1,11 @@
 import 'dart:io';
 
+import 'package:business_card_app/cubits/take_value_cubit/take_value_cubit.dart';
 import 'package:business_card_app/view/front_business_card_view.dart';
 import 'package:business_card_app/widgets/circle_avatar_widget/custom_circle_avatar_widget.dart';
 import 'package:business_card_app/widgets/text_widget/custom_text_widget.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:image_picker/image_picker.dart';
 
 class ImageView extends StatefulWidget {
@@ -15,6 +17,13 @@ class ImageView extends StatefulWidget {
 }
 
 class _ImageViewState extends State<ImageView> {
+  late TakeValueCubit takeValueCubit;
+  @override
+  void initState() {
+    takeValueCubit = BlocProvider.of<TakeValueCubit>(context);
+    super.initState();
+  }
+
   File? selectedImage;
   Future<void> selectImageMethod() async {
     ImagePicker imagePicker = ImagePicker();
@@ -28,6 +37,12 @@ class _ImageViewState extends State<ImageView> {
             pickedImageFile.path,
           );
         },
+      );
+    }
+    if (selectedImage != null) {
+      takeValueCubit.takeValueMethod(
+        takeValue: selectedImage!.path,
+        index: 5,
       );
     }
   }
@@ -46,7 +61,7 @@ class _ImageViewState extends State<ImageView> {
             fontWeight: FontWeight.bold,
           ),
           const SizedBox(
-            height: 50,
+            height: 70,
           ),
           if (selectedImage != null)
             Column(
@@ -57,7 +72,7 @@ class _ImageViewState extends State<ImageView> {
                   width: 200,
                 ),
                 const SizedBox(
-                  height: 50,
+                  height: 100,
                 ),
               ],
             ),
@@ -73,7 +88,7 @@ class _ImageViewState extends State<ImageView> {
             ),
           ),
           const SizedBox(
-            height: 250,
+            height: 90,
           ),
           Row(
             mainAxisAlignment: MainAxisAlignment.center,

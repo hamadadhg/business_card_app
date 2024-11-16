@@ -12,7 +12,9 @@ class CustomRowContainCircleAvatar extends StatelessWidget {
   Widget build(BuildContext context) {
     return Row(
       children: [
-        const CustomStackWidget(),
+        CustomStackWidget(
+          thirdListCollectionOfValue: secondListCollectionOfValue,
+        ),
         CustomColumnContainTexts(
           lastListCollectionOfValue: secondListCollectionOfValue,
         ),

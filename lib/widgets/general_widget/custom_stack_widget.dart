@@ -3,15 +3,20 @@ import 'package:business_card_app/widgets/row_widget/custom_row_contain_vertical
 import 'package:flutter/material.dart';
 
 class CustomStackWidget extends StatelessWidget {
-  const CustomStackWidget({super.key});
-
+  const CustomStackWidget({
+    super.key,
+    required this.thirdListCollectionOfValue,
+  });
+  final List<String> thirdListCollectionOfValue;
   @override
   Widget build(BuildContext context) {
-    return const Stack(
+    return Stack(
       alignment: Alignment.center,
       children: [
-        CustomRowContainVerticalDividerWidget(),
-        CustomCircleAvatarToImageWidget(),
+        const CustomRowContainVerticalDividerWidget(),
+        CustomCircleAvatarToImageWidget(
+          forthListCollectionOfValue: thirdListCollectionOfValue,
+        ),
       ],
     );
   }
