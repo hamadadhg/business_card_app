@@ -1,31 +1,28 @@
-import 'dart:developer';
+/*
 import 'dart:io';
-
+import 'package:business_card_app/constant.dart';
+import 'package:business_card_app/model/access_value_model.dart';
 import 'package:business_card_app/widgets/text_widget/custom_text_widget.dart';
 import 'package:flutter/material.dart';
 
 class CustomCircleAvatarToImageWidget extends StatelessWidget {
   const CustomCircleAvatarToImageWidget({
     super.key,
-    required this.forthListCollectionOfValue,
+    required this.forthAccessValueModel,
   });
-  final List<String> forthListCollectionOfValue;
+  final AccessValueModel forthAccessValueModel;
   @override
   Widget build(BuildContext context) {
-    final String imagePath = forthListCollectionOfValue[5];
+    final String imagePath = forthAccessValueModel.image;
     final bool isValidPath = File(imagePath).existsSync();
-    log(
-      'The ImagePath Is $imagePath',
-    );
+    // .existsSync() use to check the path is exist in this file or no
     return CircleAvatar(
       backgroundColor: const Color(
         0xff07723A,
       ),
       radius: 60,
       child: CircleAvatar(
-        backgroundColor: const Color(
-          0xffE2BB59,
-        ),
+        backgroundColor: kSunyColor,
         radius: 53,
         child: ClipOval(
           child: isValidPath
@@ -34,8 +31,8 @@ class CustomCircleAvatarToImageWidget extends StatelessWidget {
                     imagePath,
                   ),
                   fit: BoxFit.cover,
-                  height: 100,
-                  width: 100,
+                  height: 120,
+                  width: 120,
                 )
               : const CustomTextWidget(
                   text: 'No Image',
@@ -46,3 +43,4 @@ class CustomCircleAvatarToImageWidget extends StatelessWidget {
     );
   }
 }
+*/

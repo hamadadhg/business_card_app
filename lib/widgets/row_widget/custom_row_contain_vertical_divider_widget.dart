@@ -1,3 +1,5 @@
+/*
+import 'package:business_card_app/constant.dart';
 import 'package:flutter/material.dart';
 
 class CustomRowContainVerticalDividerWidget extends StatelessWidget {
@@ -5,26 +7,23 @@ class CustomRowContainVerticalDividerWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const Row(
+    return Row(
       children: [
         VerticalDivider(
           thickness: 4,
           width: 15,
-          color: Color(
-            0xffE2BB59,
-          ),
+          color: kSunyColor,
         ),
-        SizedBox(
+        const SizedBox(
           width: 5,
         ),
         VerticalDivider(
           thickness: 4,
           width: 15,
-          color: Color(
-            0xffE2BB59,
-          ),
+          color: kSunyColor,
         ),
       ],
     );
   }
 }
+*/

@@ -1,3 +1,5 @@
+/*
+import 'package:business_card_app/constant.dart';
 import 'package:business_card_app/cubits/take_value_cubit/take_value_cubit.dart';
 import 'package:business_card_app/model/access_value_model.dart';
 import 'package:business_card_app/states/take_value_state.dart';
@@ -6,32 +8,34 @@ import 'package:business_card_app/widgets/text_widget/custom_text_widget.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
-class FrontBusinessCardView extends StatefulWidget {
-  const FrontBusinessCardView({super.key});
-  static String frontBusinessCardViewId = 'FrontBusinessCardView';
+class FrontAndBackBusinessCardView extends StatefulWidget {
+  const FrontAndBackBusinessCardView({super.key});
+  static String frontAndBackBusinessCardViewId = 'FrontAndBackBusinessCardView';
 
   @override
-  State<FrontBusinessCardView> createState() => _FrontBusinessCardViewState();
+  State<FrontAndBackBusinessCardView> createState() =>
+      _FrontAndBackBusinessCardViewState();
 }
 
-class _FrontBusinessCardViewState extends State<FrontBusinessCardView> {
+class _FrontAndBackBusinessCardViewState
+    extends State<FrontAndBackBusinessCardView> {
   late List<String> listToRecieveValue;
   @override
   void initState() {
-    listToRecieveValue =
-        BlocProvider.of<TakeValueCubit>(context).listToTakeValue;
+    listToRecieveValue = context.read<TakeValueCubit>().listToTakeValue;
     super.initState();
   }
+
+//1: context.read<>() same 2: BlocProvider.of<>(context) , but the 1 is best
 
   @override
   Widget build(BuildContext context) {
     return BlocBuilder<TakeValueCubit, TakeValueState>(
       builder: (context, state) {
-        listToRecieveValue = context.read<TakeValueCubit>().listToTakeValue;
         final AccessValueModel accessValueModel = AccessValueModel(
           name: listToRecieveValue[0],
           work: listToRecieveValue[1],
-          number: listToRecieveValue[2],
+          phone: listToRecieveValue[2],
           email: listToRecieveValue[3],
           site: listToRecieveValue[4],
           image: listToRecieveValue[5],
@@ -44,31 +48,27 @@ class _FrontBusinessCardViewState extends State<FrontBusinessCardView> {
             child: Column(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                const CustomTextWidget(
+                CustomTextWidget(
                   text: 'Front Card',
                   fontSize: 25,
                   fontWeight: FontWeight.bold,
-                  color: Color(
-                    0xffE5B952,
-                  ),
+                  color: kSunyColor,
                   fontFamily: 'Dancing Script',
                 ),
                 const SizedBox(
                   height: 10,
                 ),
                 CustomFrontCardWidget(
-                  firstListCollectionOfValue: listToRecieveValue,
+                  firstAccessValueModel: accessValueModel,
                 ),
                 const SizedBox(
                   height: 40,
                 ),
-                const CustomTextWidget(
+                CustomTextWidget(
                   text: 'Back Card',
                   fontSize: 25,
                   fontWeight: FontWeight.bold,
-                  color: Color(
-                    0xffE5B952,
-                  ),
+                  color: kSunyColor,
                   fontFamily: 'Dancing Script',
                 ),
                 const SizedBox(
@@ -85,3 +85,4 @@ class _FrontBusinessCardViewState extends State<FrontBusinessCardView> {
     );
   }
 }
+*/

@@ -1,7 +1,8 @@
+/*
 import 'dart:io';
-
+import 'package:business_card_app/constant.dart';
 import 'package:business_card_app/cubits/take_value_cubit/take_value_cubit.dart';
-import 'package:business_card_app/view/front_business_card_view.dart';
+import 'package:business_card_app/view/front_and_back_business_card_view.dart';
 import 'package:business_card_app/widgets/circle_avatar_widget/custom_circle_avatar_widget.dart';
 import 'package:business_card_app/widgets/text_widget/custom_text_widget.dart';
 import 'package:flutter/material.dart';
@@ -95,7 +96,7 @@ class _ImageViewState extends State<ImageView> {
             children: [
               CustomCircleAvatarWidget(
                 text: 'Back',
-                backgroundColor: Colors.red,
+                backgroundColor: kRedColor,
                 onTap: () {
                   Navigator.pop(
                     context,
@@ -109,11 +110,11 @@ class _ImageViewState extends State<ImageView> {
                 onTap: () {
                   Navigator.pushNamed(
                     context,
-                    FrontBusinessCardView.frontBusinessCardViewId,
+                    FrontAndBackBusinessCardView.frontAndBackBusinessCardViewId,
                   );
                 },
                 text: 'Go',
-                backgroundColor: Colors.green,
+                backgroundColor: kGreenColor,
               ),
             ],
           ),
@@ -122,3 +123,4 @@ class _ImageViewState extends State<ImageView> {
     );
   }
 }
+*/

@@ -1,24 +1,26 @@
+/*
+import 'package:business_card_app/constant.dart';
+import 'package:business_card_app/model/access_value_model.dart';
 import 'package:business_card_app/widgets/row_widget/custom_row_contain_circle_avatar_widget.dart';
 import 'package:flutter/material.dart';
 
 class CustomFrontCardWidget extends StatelessWidget {
   const CustomFrontCardWidget({
     super.key,
-    required this.firstListCollectionOfValue,
+    required this.firstAccessValueModel,
   });
-  final List<String> firstListCollectionOfValue;
+  final AccessValueModel firstAccessValueModel;
   @override
   Widget build(BuildContext context) {
     return SizedBox(
       height: 240,
       child: Card(
-        color: const Color(
-          0xff023926,
-        ),
+        color: kDeepGreenColor,
         child: CustomRowContainCircleAvatar(
-          secondListCollectionOfValue: firstListCollectionOfValue,
+          secondAccessValueModel: firstAccessValueModel,
         ),
       ),
     );
   }
 }
+*/

@@ -1,3 +1,5 @@
+/*
+import 'package:business_card_app/constant.dart';
 import 'package:business_card_app/cubits/take_value_cubit/take_value_cubit.dart';
 import 'package:business_card_app/view/site_view.dart';
 import 'package:business_card_app/widgets/circle_avatar_widget/custom_circle_avatar_widget.dart';
@@ -55,7 +57,7 @@ class _EmailViewState extends State<EmailView> {
                 children: [
                   CustomCircleAvatarWidget(
                     text: 'Back',
-                    backgroundColor: Colors.red,
+                    backgroundColor: kRedColor,
                     onTap: () {
                       Navigator.pop(
                         context,
@@ -80,7 +82,7 @@ class _EmailViewState extends State<EmailView> {
                       }
                     },
                     text: 'Go',
-                    backgroundColor: Colors.green,
+                    backgroundColor: kGreenColor,
                   ),
                 ],
               ),
@@ -91,3 +93,4 @@ class _EmailViewState extends State<EmailView> {
     );
   }
 }
+*/

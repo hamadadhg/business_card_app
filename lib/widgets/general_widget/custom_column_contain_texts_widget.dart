@@ -1,5 +1,6 @@
-import 'dart:developer';
-
+/*
+import 'package:business_card_app/constant.dart';
+import 'package:business_card_app/model/access_value_model.dart';
 import 'package:business_card_app/widgets/row_widget/custom_row_contain_icon_and_text_widget.dart';
 import 'package:business_card_app/widgets/text_widget/custom_text_widget.dart';
 import 'package:flutter/material.dart';
@@ -8,40 +9,33 @@ import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 class CustomColumnContainTexts extends StatelessWidget {
   const CustomColumnContainTexts({
     super.key,
-    required this.lastListCollectionOfValue,
+    required this.lastAccessValueModel,
   });
-  final List<String> lastListCollectionOfValue;
+  final AccessValueModel lastAccessValueModel;
   @override
   Widget build(BuildContext context) {
-    log(
-      'The Email Is ${lastListCollectionOfValue[3]}',
-    );
     return Column(
       children: [
         const SizedBox(
           height: 20,
         ),
         CustomTextWidget(
-          text: lastListCollectionOfValue[0],
+          text: lastAccessValueModel.name,
           fontSize: 25,
           fontWeight: FontWeight.bold,
-          color: const Color(
-            0xffE5B952,
-          ),
+          color: kSunyColor,
         ),
         CustomTextWidget(
-          text: lastListCollectionOfValue[1],
+          text: lastAccessValueModel.work,
           fontSize: 16,
-          color: const Color(
-            0xffE5B952,
-          ),
+          color: kSunyColor,
         ),
         const SizedBox(
           height: 30,
         ),
         CustomRowContainIconAndTextWidget(
           iconDataInRow: FontAwesomeIcons.phoneVolume,
-          textInRow: lastListCollectionOfValue[2],
+          textInRow: lastAccessValueModel.phone,
         ),
         const SizedBox(
           height: 15,
@@ -52,7 +46,7 @@ class CustomColumnContainTexts extends StatelessWidget {
           ),
           child: CustomRowContainIconAndTextWidget(
             iconDataInRow: Icons.email,
-            textInRow: lastListCollectionOfValue[3],
+            textInRow: lastAccessValueModel.email,
           ),
         ),
         const SizedBox(
@@ -64,10 +58,11 @@ class CustomColumnContainTexts extends StatelessWidget {
           ),
           child: CustomRowContainIconAndTextWidget(
             iconDataInRow: FontAwesomeIcons.locationDot,
-            textInRow: lastListCollectionOfValue[4],
+            textInRow: lastAccessValueModel.site,
           ),
         ),
       ],
     );
   }
 }
+*/

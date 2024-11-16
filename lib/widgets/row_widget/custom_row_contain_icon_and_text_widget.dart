@@ -1,3 +1,5 @@
+/*
+import 'package:business_card_app/constant.dart';
 import 'package:business_card_app/widgets/general_widget/custom_icon_widget.dart';
 import 'package:business_card_app/widgets/text_widget/custom_text_widget.dart';
 import 'package:flutter/material.dart';
@@ -30,11 +32,10 @@ class CustomRowContainIconAndTextWidget extends StatelessWidget {
         CustomTextWidget(
           text: textInRow,
           fontSize: 13,
-          color: const Color(
-            0xffDFB954,
-          ),
+          color: kSunyColor,
         ),
       ],
     );
   }
 }
+*/

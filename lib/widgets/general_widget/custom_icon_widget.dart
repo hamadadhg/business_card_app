@@ -1,3 +1,5 @@
+/*
+import 'package:business_card_app/constant.dart';
 import 'package:flutter/material.dart';
 
 class CustomIconWidget extends StatelessWidget {
@@ -11,15 +13,12 @@ class CustomIconWidget extends StatelessWidget {
     return Container(
       height: 26,
       width: 30,
-      color: const Color(
-        0xffDFB954,
-      ),
+      color: kSunyColor,
       child: Icon(
         iconData,
-        color: const Color(
-          0xff003827,
-        ),
+        color: kDeepGreenColor,
       ),
     );
   }
 }
+*/
