@@ -1,4 +1,3 @@
-/*
 import 'dart:io';
 import 'package:business_card_app/constant.dart';
 import 'package:business_card_app/cubits/take_value_cubit/take_value_cubit.dart';
@@ -123,4 +122,3 @@ class _ImageViewState extends State<ImageView> {
     );
   }
 }
-*/

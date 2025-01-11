@@ -1,4 +1,3 @@
-/*
 class AccessValueModel {
   final String name;
   final String work;
@@ -15,4 +14,3 @@ class AccessValueModel {
     required this.image,
   });
 }
-*/
