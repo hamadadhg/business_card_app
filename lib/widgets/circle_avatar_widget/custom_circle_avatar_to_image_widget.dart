@@ -1,3 +1,4 @@
+/*
 import 'dart:io';
 import 'package:business_card_app/constant.dart';
 import 'package:business_card_app/model/access_value_model.dart';
@@ -42,3 +43,4 @@ class CustomCircleAvatarToImageWidget extends StatelessWidget {
     );
   }
 }
+*/

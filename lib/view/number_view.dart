@@ -1,3 +1,4 @@
+/*
 import 'package:business_card_app/constant.dart';
 import 'package:business_card_app/cubits/take_value_cubit/take_value_cubit.dart';
 import 'package:business_card_app/view/email_view.dart';
@@ -83,3 +84,4 @@ class _NumberViewState extends State<NumberView> {
     );
   }
 }
+*/

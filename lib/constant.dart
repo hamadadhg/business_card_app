@@ -1,3 +1,4 @@
+/*
 import 'package:flutter/material.dart';
 
 const Color kWhiteColor = Colors.white;
@@ -13,3 +14,4 @@ Color kSunyColor = const Color(
 Color kDeepGreenColor = const Color(
   0xff023926,
 );
+*/

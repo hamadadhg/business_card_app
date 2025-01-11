@@ -1,3 +1,4 @@
+/*
 import 'package:business_card_app/constant.dart';
 import 'package:business_card_app/widgets/general_widget/custom_icon_widget.dart';
 import 'package:business_card_app/widgets/text_widget/custom_text_widget.dart';
@@ -37,3 +38,4 @@ class CustomRowContainIconAndTextWidget extends StatelessWidget {
     );
   }
 }
+*/
